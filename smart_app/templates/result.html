@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Skor</title>
+</head>
+<body>
+    <h1>Hasil Skor</h1>
+    <h2>Skor untuk Setiap Alternatif</h2>
+    <ul>
+        {% for score in scores %}
+            <li>A{{ loop.index }}: {{ score }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Alternatif Terbaik</h2>
+    <p>Alternatif A{{ best_alternative }} dengan skor {{ best_score }}</p>
+    <a href="/">Kembali</a>
+</body>
+</html>
